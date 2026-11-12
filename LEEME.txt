@@ -1,30 +1,10 @@
-VISUALES EN VIVO - PAQUETE SIN CONEXION (PWA)
+VISUALES EN VIVO - PAQUETE PROTEGIDO CON CONTRASENA  v13
 
-Que es: la app completa. Se instala en el telefono o tablet, funciona sin internet
-y se renueva sola cuando hay conexion.
+Este paquete ya tiene la app cifrada en index.html. Se usa igual que el paquete normal:
+1. Crea un repositorio PUBLICO en GitHub y sube TODOS estos archivos (Add file > Upload files).
+2. Settings > Pages > Deploy from a branch > main > carpeta raiz > Save.
+3. Abre el enlace en Chrome con wifi, escribe la contrasena y elige "Instalar app".
+   Marca "Recordar en este dispositivo" si no quieres escribirla cada vez.
 
-OPCION A - Usarla ya, sin publicar nada (solo en una computadora)
-1. Descomprime esta carpeta.
-2. En una terminal dentro de la carpeta: python3 -m http.server 8080
-3. Abre http://localhost:8080 en Chrome y, en el menu, elige "Instalar app".
-
-OPCION B - Para instalarla en la tablet y el celular (recomendada)
-Sube esta carpeta a un hosting estatico con https. Por ejemplo:
-- Netlify Drop (arrastras la carpeta) o GitHub Pages (gratis).
-En la tablet abre ese enlace en Chrome > menu > "Instalar app" / "Agregar a la pantalla de inicio".
-Abrela una vez con wifi: guarda todo. Desde ahi funciona sin internet.
-
-ACTUALIZAR
-Cuando tengas una version nueva, reemplaza index.html y sw.js (sube el numero en
-const V='visuales-v11' de sw.js) en el hosting. La app la descarga sola la
-siguiente vez que abra con conexion. Ajustes > Sin conexion y actualizaciones
-muestra la version y permite buscar actualizacion.
-
-CAMBIAR EL NOMBRE
-Edita "name" y "short_name" en manifest.webmanifest y el <title> en index.html.
-Los iconos son provisionales (icon-192.png e icon-512.png): reemplazalos por los tuyos
-con el mismo tamano y nombre.
-
-NOTAS
-- El microfono, MIDI y la ventana flotante piden permiso del navegador y requieren https o localhost.
-- Los datos (configuraciones, paletas, mapeo, dibujos de Oramics) se guardan en el dispositivo.
+CAMBIAR LA CONTRASENA: usa proteger.html (del paquete normal) con el index.html sin proteger.
+NO subas a GitHub la app sin proteger. Con sw.js y la app instalada, funciona sin internet.
